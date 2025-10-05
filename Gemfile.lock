@@ -71,6 +71,7 @@ GEM
     ffi (1.17.2-x64-mingw32)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    hirb (0.7.3)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     jbuilder (2.13.0)
@@ -203,6 +204,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   coffee-rails (~> 4.2)
+  hirb
   jbuilder (~> 2.5)
   jquery-rails
   puma (~> 3.7)
