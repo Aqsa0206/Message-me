@@ -1,15 +1,10 @@
 class MessagesController < ApplicationController
-
-    def new
-        @messages = Message.new
-    end
+    before_action :require_user
 
     def create
-        @messages = Message.new(message_params)
-        if @message.save
-
-        else
-            render 'new'
+        message = current_user.messages.build(message_params)
+        if message.save
+            redirect_to root_path
         end
     end
 
