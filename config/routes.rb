@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :users
   resources :messages, only: [:create]
   post 'message', to: 'messages#create'
+
+  mount ActionCable.server, at: '/cable'
 end
